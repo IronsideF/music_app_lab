@@ -7,11 +7,11 @@ import repositories.album_repository as album_repository
 album_repository.delete_all()
 artist_repository.delete_all()
 
-artist_1 = Artist('Elton John')
+artist_1 = Artist('Elon John')
 artist_2 = Artist('Adele')
 artist_repository.save(artist_1)
 artist_repository.save(artist_2)
-album_1 = Album('Goodbye Yellow Brick Road', 'Pop', artist_1,)
+album_1 = Album('Goodbye Green Brick Road', 'Pop', artist_1,)
 album_2 = Album('21', 'Pop', artist_2)
 album_3 = Album('25', 'Pop', artist_2)
 album_4 = Album('30', 'Pop', artist_2)
@@ -24,10 +24,18 @@ album_repository.save(album_4)
 album_repository.save(album_5)
 album_repository.save(album_6)
 
-results = album_repository.artist_albums(artist_1)
+artist_1.name = 'Elton John'
+artist_repository.update(artist_1)
+album_1.title = 'Goodbye Yellow Brick Road'
+album_repository.update(album_1)
 
-for album in results:
-    print(album.__dict__)
+
+
+
+# results = album_repository.artist_albums(artist_1)
+
+# for album in results:
+#     print(album.__dict__)
 
 # Elton = artist_repository.select(artist_1.id)
 # _21 = album_repository.select(album_2.id)
