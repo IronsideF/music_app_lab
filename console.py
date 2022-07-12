@@ -29,7 +29,7 @@ artist_repository.update(artist_1)
 album_1.title = 'Goodbye Yellow Brick Road'
 album_repository.update(album_1)
 
-
+album_repository.delete(album_3)
 
 
 # results = album_repository.artist_albums(artist_1)

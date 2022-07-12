@@ -63,3 +63,11 @@ def update(album):
     """
     values = [album.title, album.genre, album.artist.id, album.id]
     run_sql(sql, values)
+
+def delete(album):
+    sql = """
+    DELETE FROM albums
+    WHERE id = %s
+    """
+    values = [album.id]
+    run_sql(sql, values)

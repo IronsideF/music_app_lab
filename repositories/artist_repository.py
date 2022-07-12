@@ -48,3 +48,5 @@ def update(artist):
     """
     values = [artist.name, artist.id]
     run_sql(sql, values)
+
+
