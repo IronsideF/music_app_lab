@@ -2,6 +2,7 @@ from db.run_sql import run_sql
 
 from models.artist import Artist
 from models.album import Album
+import repositories.album_repository as album_repository
 
 def save(artist):
     sql = """
@@ -49,4 +50,15 @@ def update(artist):
     values = [artist.name, artist.id]
     run_sql(sql, values)
 
+def delete(artist):
+    sql = """
+    DELETE FROM artists
+    WHERE id = %s
+    """
+    values =[artist.id]
 
+    albums = album_repository.artist_albums(artist)
+    for album in albums:
+        album_repository.delete(album)
+
+    run_sql(sql, values)

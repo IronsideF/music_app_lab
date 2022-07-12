@@ -31,6 +31,8 @@ album_repository.update(album_1)
 
 album_repository.delete(album_3)
 
+artist_repository.delete(artist_2)
+
 
 # results = album_repository.artist_albums(artist_1)
 
