@@ -39,10 +39,10 @@ artist_repository.delete(artist_2)
 # for album in results:
 #     print(album.__dict__)
 
-# Elton = artist_repository.select(artist_1.id)
+# # Elton = artist_repository.select(artist_1.id)
 # _21 = album_repository.select(album_2.id)
 
-# print(Elton.__dict__)
+# # print(Elton.__dict__)
 # print(_21.__dict__, _21.artist.__dict__)
 
 # all_artists = artist_repository.select_all()
